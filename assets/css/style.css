@@ -1,0 +1,280 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* FONTS VARS */
+  --main-font: 'Roboto', sans-serif;
+
+  /* COLORS VARS */
+  --dark-background-color: #202020;
+  --main-dark-background-color: #000000;
+  --main-font-color: #fff;
+  --secondary-font-color: #aaaaaa;
+}
+
+/* 
+  BASIC STYLES
+*/
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--main-dark-background-color);
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+/* 
+  UTIL CLASSES
+*/
+.divider {
+  height: 2px;
+  background: var(--dark-background-color);
+  margin: 1rem 0;
+}
+
+/* 
+  HEADER SECTION 
+*/
+
+header {
+  background-color: var(--dark-background-color);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 5rem;
+}
+
+i {
+  color: var(--secondary-font-color);
+  font-size: 1.6rem;
+  transition: color ease-in-out 0.2s;
+}
+
+i:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 155.5rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+header .container {
+  height: 100%;
+}
+
+.header__subcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.header__subcontainer--left {
+  display: flex;
+  align-items: center;
+}
+
+.logo svg {
+  margin-left: 2rem;
+  display: block;
+  width: 10rem;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-form input {
+  height: 3rem;
+  width: 60rem;
+}
+
+.search-form input:focus {
+  outline: none;
+}
+
+.search-form i {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.search-form .search-form__button {
+  position: absolute;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  height: 100%;
+  width: 5rem;
+  right: -5rem;
+  cursor: pointer;
+}
+
+.header__personal {
+  display: flex;
+  align-items: center;
+}
+
+.header__personal > div:not(:last-child) {
+  margin-right: 3rem;
+}
+
+.header__personal .header__profile img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.main {
+  margin-top: 8rem;
+}
+
+.main__subcontainer {
+  display: flex;
+  margin: 2rem 0;
+}
+
+/*---------------
+--VIDEO SECTION--
+----------------*/
+
+.video {
+  margin-right: 4rem;
+  max-width: 93.1rem;
+  max-height: 52.4rem;
+}
+
+.video__container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
+.video__container video {
+  width: 100%;
+  height: 100%;
+}
+
+.video__container video:focus {
+  outline: none;
+}
+
+.video__info .video__info--name h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.video__info--more {
+  display: flex;
+  align-items: center;
+  margin-top: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.video__info--more > div {
+  display: flex;
+  align-items: center;
+}
+
+.video__info--more :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.video__info--more div:nth-child(2) {
+  flex: 1;
+}
+
+.video__info a {
+  font-size: 1.6rem;
+  color: var(--main-font-color);
+}
+
+/*-----------------------
+-- SUGGESTIONS SECTION -- 
+------------------------*/
+
+.suggestions__list li {
+  display: flex;
+}
+
+.suggestions__list li img {
+  width: 20rem;
+  margin-right: 1rem;
+}
+
+.suggestions__list li,
+.suggestions__list .description > * {
+  margin-bottom: 0.7rem;
+}
+
+.video__channel > div {
+  display: flex;
+  align-items: center;
+}
+
+.video__channel > div :not(:last-child) {
+  margin-right: 1rem;
+}
+
+.video__channel .video__channel--info {
+  flex: 1;
+}
+
+.video__channel--profile-photo {
+  height: 5rem;
+  width: 5rem;
+}
+
+.video__channel--profile-photo img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.video__channel--info .video__channel--name {
+  font-size: 1.5rem;
+}
+
+.video__channel--info .video__channel--subs-count {
+  color: var(--secondary-font-color);
+  font-size: 1.3rem;
+}
+
+.video__channel--subscribe-btn {
+  height: 100%;
+  padding: 0.8rem 1.4rem;
+  font-size: 1.5rem;
+  background-color: #cc0000;
+  color: var(--main-font-color);
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.video__channel--more-info {
+  font-size: 1.6rem;
+  padding: 1rem 12rem 0 6rem;
+}
